@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <header className="navBarContainer">
       <img
-        src="https://res.cloudinary.com/dqcn00akv/image/upload/v1718233130/OptiTech_Store_O-removebg-preview_yh7eru.png"
+        src="https://res.cloudinary.com/dqcn00akv/image/upload/v1718243030/LogoOTS-removebg-preview_zzugof.png"
         alt="Logo de OptiTech Store"
       />
 
