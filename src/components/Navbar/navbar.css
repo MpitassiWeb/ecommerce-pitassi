@@ -1,1 +1,20 @@
+.navBarContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBarContainer img {
+  width: 75px;
+  object-fit: cover;
+}
 
+ul {
+  display: flex;
+  gap: 30px;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}

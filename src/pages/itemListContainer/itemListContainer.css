@@ -1,0 +1,9 @@
+.containerGreeting {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+h1 {
+  text-wrap: balance;
+  text-align: center;
+  font-size: 4em;
+}
