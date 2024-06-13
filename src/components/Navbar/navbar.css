@@ -4,7 +4,7 @@
   align-items: center;
 }
 .navBarContainer img {
-  width: 115px;
+  width: 100px;
   object-fit: cover;
 }
 
@@ -17,4 +17,5 @@ ul li {
 }
 ul li a {
   text-decoration: none;
+  font-size: 1.1em;
 }
