@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 50px;
+
 }
 .navBarContainer img {
   width: 100px;
@@ -10,12 +12,36 @@
 
 ul {
   display: flex;
-  gap: 30px;
+  position: fixed;
+  animation: moveNav linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 120px;
+  /* gap: 30px; */
 }
 ul li {
   list-style: none;
+  padding: 20px; 
+}
+ul li:hover{
+  background-color: rgb(206, 206, 206);
+  border-bottom: 2px solid #c0b922;
 }
 ul li a {
   text-decoration: none;
   font-size: 1.1em;
+  color: #dddd32;
+  font-weight: bold;
+  
+}
+a:hover{
+  color: #c0b922;
+}
+
+@keyframes moveNav {
+  to{
+    background: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(5px);
+    font-size: 1em;
+    color: #c0b922;
+  }
 }
