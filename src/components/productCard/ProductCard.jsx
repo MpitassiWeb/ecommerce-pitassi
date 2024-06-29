@@ -7,8 +7,9 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
-export const ProductCard = ({ title, img, description, price }) => {
+export const ProductCard = ({ id, title, img, description, price }) => {
   return (
     <Grid item xs={10} sm={8} md={6} lg={4}>
       <Card>
@@ -25,7 +26,11 @@ export const ProductCard = ({ title, img, description, price }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Comprar</Button>
+          <Link to={`/itemDetail/${id}`}>
+            <Button size="small" variant="contained">
+              Ver más
+            </Button>
+          </Link>
           <Button size="small">Agregar a favoritos</Button>
         </CardActions>
       </Card>
