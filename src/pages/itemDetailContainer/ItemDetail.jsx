@@ -1,4 +1,4 @@
-import { Box, CardMedia, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { CounterContainer } from "../../components/counter/CounterContainer";
 
 
