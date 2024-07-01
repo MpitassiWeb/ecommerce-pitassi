@@ -1,6 +1,6 @@
 import { Box, CardMedia, Container, Grid, Typography } from "@mui/material";
 import { CounterContainer } from "../../components/counter/CounterContainer";
-import { ProductCard } from "../../components/productCard/ProductCard";
+
 
 export const ItemDetail = ({ item }) => {
   return (
