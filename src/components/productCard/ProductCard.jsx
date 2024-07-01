@@ -8,6 +8,7 @@ import {
   Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 export const ProductCard = ({ id, title, img, description, price }) => {
   return (
@@ -31,7 +32,9 @@ export const ProductCard = ({ id, title, img, description, price }) => {
               Ver más
             </Button>
           </Link>
-          <Button size="small">Agregar a favoritos</Button>
+          <Button size="small">
+            <FavoriteIcon />
+          </Button>
         </CardActions>
       </Card>
     </Grid>
