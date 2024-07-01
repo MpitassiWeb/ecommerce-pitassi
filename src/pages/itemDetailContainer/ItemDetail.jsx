@@ -26,12 +26,6 @@ export const ItemDetail = ({ item }) => {
             <Typography variant="p">{item.description}</Typography>
           </Grid>
         </Grid>
-        {/* <ProductCard
-          title={item.title}
-          img={item.img}
-          description={item.description}
-          price={item.price}
-        /> */}
         <CounterContainer />
       </Container>
     </>
