@@ -15,7 +15,6 @@ export const ItemList = ({ products, error, greeting }) => {
                 id={elemento.id}
                 title={elemento.title}
                 img={elemento.img}
-                description={elemento.description}
                 price={elemento.price}
               />
             );

@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { CounterContainer } from "../../components/counter/CounterContainer";
 
 export const ItemDetail = ({ item }) => {
@@ -19,7 +19,7 @@ export const ItemDetail = ({ item }) => {
           <Grid item md={7}>
             <img
               src={item.img}
-              style={{ width: "100%" , borderRadius: "20px"}}
+              style={{ width: "100%", borderRadius: "15px" }}
               alt={`Imagen de ${item.title}`}
             />
           </Grid>
@@ -32,7 +32,8 @@ export const ItemDetail = ({ item }) => {
                 id++;
                 return (
                   <Typography key={id} variant="body1">
-                    <ChevronRightIcon fontSize="small"/>{line}
+                    <ChevronRightIcon fontSize="small" />
+                    {line}
                   </Typography>
                 );
               })}
