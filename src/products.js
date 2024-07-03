@@ -5,7 +5,7 @@ export let products = [
     maker: "Kingston",
     price: 33500,
     description:
-      "Capacidad: 8GB\nPerfil de memoria: 3200MT/s 16-18-18 1.35V\nNúmero de parte: KF432C16BB/8",
+      "Capacidad: 8GB * Perfil de memoria: 3200MT/s 16-18-18 1.35V * Número de parte: KF432C16BB/8",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/RAMkingstonFURY_zlpqkr.jpg",
     stock: 10,
     category: "Memorias",
@@ -17,7 +17,7 @@ export let products = [
     maker: "Kingston",
     price: 62500,
     description:
-      "Capacidad: 16GB\nPerfil de memoria: 3200MT/s 16-18-18 1.35V\nNúmero de parte: KF432C16BB1/16",
+      "Capacidad: 16GB * Perfil de memoria: 3200MT/s 16-18-18 1.35V * Número de parte: KF432C16BB1/16",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/RAMkingstonFURY_zlpqkr.jpg",
     stock: 8,
     category: "Memorias",
@@ -29,7 +29,7 @@ export let products = [
     maker: "Kingston",
     price: 19900,
     description:
-      "Capacidad: 4GB\nPerfil de memoria: 2666MT/s 19-16-16 1.2V\nNúmero de parte: KVR26S19S6/4",
+      "Capacidad: 4GB * Perfil de memoria: 2666MT/s 19-16-16 1.2V * Número de parte: KVR26S19S6/4",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/RAMkingstonSODIMM_bjsdix.jpg",
     stock: 16,
     category: "Memorias",
@@ -41,7 +41,7 @@ export let products = [
     maker: "Kingston",
     price: 35500,
     description:
-      "Capacidad: 8GB\nPerfil de memoria: 2666MT/s 19-16-16 1.2V\nNúmero de parte: KVR26S19S6/8",
+      "Capacidad: 8GB * Perfil de memoria: 2666MT/s 19-16-16 1.2V * Número de parte: KVR26S19S6/8",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/RAMkingstonSODIMM_bjsdix.jpg",
     stock: 20,
     category: "Memorias",
@@ -53,7 +53,7 @@ export let products = [
     maker: "Kingston",
     price: 57300,
     description:
-      "Capacidad: 16GB\nPerfil de memoria: 2666MT/s 19-16-16 1.2V\nNúmero de parte: KVR26S19S8/16",
+      "Capacidad: 16GB * Perfil de memoria: 2666MT/s 19-16-16 1.2V * Número de parte: KVR26S19S8/16",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/RAMkingstonSODIMM_bjsdix.jpg",
     stock: 12,
     category: "Memorias",
@@ -65,7 +65,7 @@ export let products = [
     maker: "Kingston",
     price: 32000,
     description:
-      "Capacidad: 250GB\nPCIe NVMe Gen 4x4\nHasta 3.000MB/seg Lectura, 1.300MB/seg Escritura\nNúmero de parte: SNV2S/250G",
+      "Capacidad: 250GB * PCIe NVMe Gen 4x4 * Hasta 3.000MB/seg Lectura, 1.300MB/seg Escritura * Número de parte: SNV2S/250G",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/SSDKingstonNV2_bwcspj.jpg",
     stock: 15,
     category: "Discos",
@@ -77,7 +77,7 @@ export let products = [
     maker: "Kingston",
     price: 70000,
     description:
-      "Capacidad: 500GB\nPCIe NVMe Gen 4x4\nHasta 3.500MB/seg Lectura, 2.100MB/seg Escritura\nNúmero de parte: SNV2S/500G",
+      "Capacidad: 500GB * PCIe NVMe Gen 4x4 * Hasta 3.500MB/seg Lectura, 2.100MB/seg Escritura * Número de parte: SNV2S/500G",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/SSDKingstonNV2_bwcspj.jpg",
     stock: 19,
     category: "Discos",
@@ -89,7 +89,7 @@ export let products = [
     maker: "Kingston",
     price: 46200,
     description:
-      "Capacidad: 240GB\nSATA Rev 3.0\nHasta 500MB/seg Lectura, 350MB/seg Escritura\nNúmero de parte: SA400S37/240G",
+      "Capacidad: 240GB * SATA Rev 3.0 * Hasta 500MB/seg Lectura, 350MB/seg Escritura * Número de parte: SA400S37/240G",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547008/SSDKingstonSATA_mhbrq8.jpg",
     stock: 19,
     category: "Discos",
@@ -101,7 +101,7 @@ export let products = [
     maker: "Kingston",
     price: 73000,
     description:
-      "Capacidad: 480GB\nSATA Rev 3.0\nHasta 500MB/seg Lectura, 450MB/seg Escritura\nNúmero de parte: SA400S37/480G",
+      "Capacidad: 480GB * SATA Rev 3.0 * Hasta 500MB/seg Lectura, 450MB/seg Escritura * Número de parte: SA400S37/480G",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547008/SSDKingstonSATA_mhbrq8.jpg",
     stock: 19,
     category: "Discos",
@@ -113,7 +113,7 @@ export let products = [
     maker: "Western Digital",
     price: 36200,
     description:
-      "Capacidad: 250GB\nPCIe Gen 4.0\nVelocidades de lectura hasta 2400 MB/s\nNúmero de parte: WDS250G2G0C",
+      "Capacidad: 250GB * PCIe Gen 4.0 * Velocidades de lectura hasta 2400 MB/s * Número de parte: WDS250G2G0C",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547008/WDGreenNVMe_agqwzd.png",
     stock: 12,
     category: "Discos",
@@ -125,7 +125,7 @@ export let products = [
     maker: "Western Digital",
     price: 60200,
     description:
-      "Capacidad: 250GB\nPCIe Gen 4.0\nVelocidades de lectura hasta 4150 MB/s\nNúmero de parte: WDS250G3B0E",
+      "Capacidad: 250GB * PCIe Gen 4.0 * Velocidades de lectura hasta 4150 MB/s * Número de parte: WDS250G3B0E",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547007/WDBlueNVMe_nrxk1z.webp",
     stock: 5,
     category: "Discos",
@@ -137,7 +137,7 @@ export let products = [
     maker: "Western Digital",
     price: 73000,
     description:
-      "Capacidad: 240GB\nSATA Rev 3.0\nHasta 545MB/s Lectura\nNúmero de parte: WDS240G3G0A",
+      "Capacidad: 240GB * SATA Rev 3.0 * Hasta 545MB/s Lectura * Número de parte: WDS240G3G0A",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547006/SSDWDGreenSATA_km6pze.jpg",
     stock: 10,
     category: "Discos",
@@ -149,7 +149,7 @@ export let products = [
     maker: "Western Digital",
     price: 105000,
     description:
-      "Capacidad: 1TB\n7200 RPM\nTamaño: 3.5-Inch\nTransferencia: up to 150MB/s\nNúmero de parte: WD10EZEX",
+      "Capacidad: 1TB * 7200 RPM * Tamaño: 3.5-Inch * Transferencia: up to 150MB/s * Número de parte: WD10EZEX",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718550125/HDDWDBluePC_sl3wjq.jpg",
     stock: 11,
     category: "Discos",
@@ -161,7 +161,7 @@ export let products = [
     maker: "Western Digital",
     price: 85200,
     description:
-      "Capacidad: 1TB\n5400 RPM\nTamaño: 2.5-Inch\nTransferencia: up to 150MB/s\nNúmero de parte: WD10SPZX",
+      "Capacidad: 1TB * 5400 RPM * Tamaño: 2.5-Inch * Transferencia: up to 150MB/s * Número de parte: WD10SPZX",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718550125/HDDWDBlueNotebook_qlsexe.webp",
     stock: 8,
     category: "Discos",
@@ -173,7 +173,7 @@ export let products = [
     maker: "Genius",
     price: 24000,
     description:
-      "Diseño del Teclado: Estándar\nInterfaz: USB\nDistribución: Español\nDimensiones: 435 x 135 x 20,5 mm\nPeso: 440g",
+      "Diseño del Teclado: Estándar * Interfaz: USB * Distribución: Español * Dimensiones: 435 x 135 x 20,5 mm * Peso: 440g",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547687/GeniusKB116_lrify8.bmp",
     stock: 10,
     category: "Perifericos",
@@ -185,8 +185,8 @@ export let products = [
     maker: "Genius",
     price: 20000,
     description:
-      "Diseño del Teclado: Estándar\nInterfaz: USB\nDistribución: Español\nDimensiones: 440,51 x 139,67 x 20,07 mm\nPeso: 450g",
-    img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718547006/SSDWDGreenSATA_km6pze.jpg",
+      "Diseño del Teclado: Estándar * Interfaz: USB * Distribución: Español * Dimensiones: 440,51 x 139,67 x 20,07 mm * Peso: 450g",
+    img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1719866635/GeniusK117_xrzjxr.png",
     stock: 10,
     category: "Perifericos",
     subcategory: "Teclados",
@@ -197,7 +197,7 @@ export let products = [
     maker: "Redragon",
     price: 73000,
     description:
-      "Diseño del Teclado: Compacto 60%\nInterfaz: Inalámbrica (Bluetooth 5.0)\nDistribución: Ingles\nDimensiones: 29,17 X 10,17 X 3,6 cm\nSwitches: Redragon Brown",
+      "Diseño del Teclado: Compacto 60% * Interfaz: Inalámbrica (Bluetooth 5.0) * Distribución: Ingles * Dimensiones: 29,17 X 10,17 X 3,6 cm * Switches: Redragon Brown",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718548378/RedragondraconicPro_fow2zz.png",
     stock: 4,
     category: "Perifericos",
@@ -209,7 +209,7 @@ export let products = [
     maker: "Redragon",
     price: 57000,
     description:
-      "Diseño del Teclado: Tenkeyless 80%\nInterfaz: USB\nDistribución: Español\nDimensiones: 37,5 X 15,5 X 4,3 cm\nSwitches: Outemu Blue",
+      "Diseño del Teclado: Tenkeyless 80% * Interfaz: USB * Distribución: Español * Dimensiones: 37,5 X 15,5 X 4,3 cm * Switches: Outemu Blue",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718548934/RedragonK552Kumara_imhnxt.jpg",
     stock: 5,
     category: "Perifericos",
@@ -221,7 +221,7 @@ export let products = [
     maker: "Logitech",
     price: 93500,
     description:
-      "Diseño del Teclado: Estándar\nInterfaz: USB 2.0\nDistribución: Español\nDimensiones: 452 X 218 X 33 mm\nPeso: 1000g",
+      "Diseño del Teclado: Estándar * Interfaz: USB 2.0 * Distribución: Español * Dimensiones: 452 X 218 X 33 mm * Peso: 1000g",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718549297/LogitechG213_qbera1.jpg",
     stock: 3,
     category: "Perifericos",
@@ -233,7 +233,7 @@ export let products = [
     maker: "Genius",
     price: 6450,
     description:
-      "Sensor: óptico\nInterfaz: cable USB\nLargo cable: 1.5m\nResolución: 1000 dpi\nDimensiones: 105 x 60 x 37 mm\nPeso: 85g",
+      "Sensor: óptico * Interfaz: cable USB * Largo cable: 1.5m * Resolución: 1000 dpi * Dimensiones: 105 x 60 x 37 mm * Peso: 85g",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718551115/GeniusDX110_kumj4p.jpg",
     stock: 10,
     category: "Perifericos",
@@ -245,7 +245,7 @@ export let products = [
     maker: "Logitech",
     price: 19500,
     description:
-      "Conexión: inalámbrica 2.4Ghz\nSensor: Láser\nPilas: 1 AA\nResolución: 1000 dpi\nDimensiones: 105,4 x 67,9 x 38,4 mm\nPeso: 91,0g",
+      "Conexión: inalámbrica 2.4Ghz * Sensor: Láser * Pilas: 1 AA * Resolución: 1000 dpi * Dimensiones: 105,4 x 67,9 x 38,4 mm * Peso: 91,0g",
     img: "https://res.cloudinary.com/dqcn00akv/image/upload/v1718551115/LogitechM280_eroggb.jpg",
     stock: 12,
     category: "Perifericos",
