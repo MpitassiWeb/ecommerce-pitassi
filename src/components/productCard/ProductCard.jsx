@@ -20,7 +20,7 @@ export const ProductCard = ({ id, title, img, price }) => {
             {title}
           </Typography>
           <Typography
-            gutterBottom
+            gutterBottomgit
             variant="h6"
             sx={{ fontSize: "1.8em", paddingTop: "20px", textAlign: "end" }}
           >
