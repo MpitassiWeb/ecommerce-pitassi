@@ -2,9 +2,8 @@ import { Container, Grid, Typography } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { CounterContainer } from "../../components/counter/CounterContainer";
 
-export const ItemDetail = ({ item }) => {
+export const ItemDetail = ({ item, onAdd }) => {
   let lines = [];
-  let id = 0;
   if (item.description) {
     lines = item.description.split("*");
   }
@@ -23,23 +22,22 @@ export const ItemDetail = ({ item }) => {
               alt={`Imagen de ${item.title}`}
             />
           </Grid>
-          <Grid item md={5} container direction="column" spacing={5}>
+          <Grid item md={5} container direction="column" spacing={8}>
             <Grid item>
               <Typography variant="h2">$ {item.price}</Typography>
             </Grid>
             <Grid item>
               {lines.map((line) => {
-                id++;
                 return (
-                  <Typography key={id} variant="body1">
+                  <Typography key={line} variant="body1">
                     <ChevronRightIcon fontSize="small" />
                     {line}
                   </Typography>
                 );
               })}
             </Grid>
-            <Grid item>
-              <CounterContainer />
+            <Grid item container justifyContent="center">
+              <CounterContainer onAdd={onAdd} />
             </Grid>
           </Grid>
         </Grid>
