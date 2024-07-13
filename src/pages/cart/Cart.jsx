@@ -69,19 +69,23 @@ export const Cart = () => {
           </Paper>
         );
       })}
-      <Grid item container justifyContent="center" spacing={2}>
-        <Grid item>
-          <Typography>Total a pagar: $ {totalPay}</Typography>
-        </Grid>
-        <Grid item>
-          <Button variant="outlined" onClick={clearCart}>
-            Vaciar carrito
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button variant="contained">Comprar</Button>
-        </Grid>
-      </Grid>
+      {
+        cart.length > 0 ? (
+        <Grid item container justifyContent="center" spacing={2}>
+          <Grid item>
+            <Typography variant="h5">Total a pagar: $ {totalPay}</Typography>
+          </Grid>
+          <Grid item>
+            <Button variant="outlined" onClick={clearCart}>
+              Vaciar carrito
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant="contained">Comprar</Button>
+          </Grid>
+        </Grid>) : (<Typography variant="h3">El carrito está vacío</Typography>)
+      }
+      
     </Grid>
   );
 };
