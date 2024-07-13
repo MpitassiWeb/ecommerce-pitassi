@@ -4,7 +4,9 @@ import { Button, ButtonBase, Grid, Paper, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 export const Cart = () => {
-  const { cart, clearCart, deleteProduct } = useContext(CartContext);
+  const { cart, clearCart, deleteProduct, totalCash } = useContext(CartContext);
+
+  let totalPay = totalCash();
 
   return (
     <Grid container padding="100px" display="flex" justifyContent="center">
@@ -68,6 +70,9 @@ export const Cart = () => {
         );
       })}
       <Grid item container justifyContent="center" spacing={2}>
+        <Grid item>
+          <Typography>Total a pagar: $ {totalPay}</Typography>
+        </Grid>
         <Grid item>
           <Button variant="outlined" onClick={clearCart}>
             Vaciar carrito

@@ -6,9 +6,11 @@ import { useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 export const ItemDetailContainer = () => {
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getQuantity } = useContext(CartContext);
   const [item, setItem] = useState({});
   const { id } = useParams();
+
+  let initialQuantity = getQuantity(Number(id));
 
   useEffect(() => {
     let product = products.find((product) => product.id === Number(id));
@@ -22,5 +24,5 @@ export const ItemDetailContainer = () => {
     addToCart(itemAdd);
   };
 
-  return <ItemDetail item={item} onAdd={onAdd} />;
+  return <ItemDetail item={item} onAdd={onAdd} initialQuantity={initialQuantity}/>;
 };

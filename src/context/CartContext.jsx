@@ -14,7 +14,7 @@ export const CartContextProvider = ({ children }) => {
         if (elemento.id === product.id) {
           return {
             ...elemento,
-            quantity: elemento.quantity + product.quantity,
+            quantity: product.quantity,
           };
         } else {
           return elemento;
@@ -32,7 +32,23 @@ export const CartContextProvider = ({ children }) => {
   const clearCart = () => {
     setCart([]);
   };
+  const getQuantity = (id) => {
+    let product = cart.find((product) => product.id === id);
+    return product?.quantity;
+  };
+  const totalCash = () => {
+    let totalPay = cart.reduce((acc, elemento)=>{
+      return acc + (elemento.price * elemento.quantity)
+    }, 0);
+    return totalPay;
+  };
+  const totalProductsCart = () => {
+    let totalProducts = cart.reduce((acc, elemento)=>{
+      return acc + elemento.quantity
+    }, 0);
+    return totalProducts;
+  };
 
-  let data = { cart, addToCart, clearCart, deleteProduct };
+  let data = { cart, addToCart, clearCart, deleteProduct, getQuantity, totalCash, totalProductsCart };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

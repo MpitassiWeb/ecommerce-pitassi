@@ -2,7 +2,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { CounterContainer } from "../../components/counter/CounterContainer";
 
-export const ItemDetail = ({ item, onAdd }) => {
+export const ItemDetail = ({ item, onAdd, initialQuantity }) => {
   let lines = [];
   if (item.description) {
     lines = item.description.split("*");
@@ -37,7 +37,7 @@ export const ItemDetail = ({ item, onAdd }) => {
               })}
             </Grid>
             <Grid item container justifyContent="center">
-              <CounterContainer onAdd={onAdd} />
+              <CounterContainer onAdd={onAdd} stock={item.stock} initialQuantity={initialQuantity}/>
             </Grid>
           </Grid>
         </Grid>
