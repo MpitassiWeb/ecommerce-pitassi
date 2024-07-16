@@ -1,6 +1,7 @@
 import { Layout } from "./components/layout/Layout";
 import { CartContextProvider } from "./context/CartContext";
 import { Cart } from "./pages/cart/Cart";
+import { Checkout } from "./pages/checkout/Checkout";
 import { Error404 } from "./pages/error/Error404";
 import { ItemDetailContainer } from "./pages/itemDetailContainer/ItemDetailContainer";
 import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
@@ -30,6 +31,7 @@ function App() {
             />
             <Route path="/cart" element={<Cart />} />
             <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Routes>

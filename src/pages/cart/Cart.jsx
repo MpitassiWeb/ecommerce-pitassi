@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Button, ButtonBase, Grid, Paper, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { cart, clearCart, deleteProduct, totalCash } = useContext(CartContext);
@@ -81,7 +82,7 @@ export const Cart = () => {
             </Button>
           </Grid>
           <Grid item>
-            <Button variant="contained">Comprar</Button>
+            <Link to="/checkout"><Button variant="contained">Comprar</Button></Link>
           </Grid>
         </Grid>) : (<Typography variant="h3">El carrito está vacío</Typography>)
       }
