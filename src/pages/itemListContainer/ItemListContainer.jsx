@@ -2,33 +2,27 @@ import React, { useState, useEffect } from "react";
 import { products } from "../../products";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
+import { bd } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
-  const [errorMsg, setError] = useState({});
   const { name } = useParams();
 
   useEffect(() => {
-    const getProducts = new Promise((resolve, reject) => {
-      let variable = true;
-      let arrayCategory = products.filter(
-        (product) => product.category === name
-      );
-      if (variable) {
-        resolve(name ? arrayCategory : products);
-      } else {
-        reject({ message: "error", codigo: "404" });
-      }
-    });
-
-    getProducts
-      .then((res) => {
-        setItems(res);
-      })
-      .catch((error) => {
-        setError(error);
+    let refCollection = collection(bd, "products");
+    let consulta = refCollection;
+    if (name) {
+      consulta = query(refCollection, where("category", "==", name));
+    }
+    let getProducts = getDocs(consulta);
+    getProducts.then((res) => {
+      let products = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
       });
+      setItems(products);
+    });
   }, [name]);
 
-  return <ItemList products={items} error={errorMsg} greeting={greeting} />;
+  return <ItemList products={items} greeting={greeting} />;
 };
