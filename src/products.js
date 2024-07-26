@@ -1,6 +1,5 @@
 export let products = [
   {
-    id: 1,
     title: "Memoria Kingston FURY DDR4",
     maker: "Kingston",
     price: 33500,
@@ -12,7 +11,6 @@ export let products = [
     subcategory: "DIMM",
   },
   {
-    id: 2,
     title: "Memoria Kingston FURY DDR4",
     maker: "Kingston",
     price: 62500,
@@ -24,7 +22,6 @@ export let products = [
     subcategory: "DIMM",
   },
   {
-    id: 3,
     title: "Memoria Kingston DDR4 SODIMM",
     maker: "Kingston",
     price: 19900,
@@ -36,7 +33,6 @@ export let products = [
     subcategory: "SODIMM",
   },
   {
-    id: 4,
     title: "Memoria Kingston DDR4 SODIMM",
     maker: "Kingston",
     price: 35500,
@@ -48,7 +44,6 @@ export let products = [
     subcategory: "SODIMM",
   },
   {
-    id: 5,
     title: "Memoria Kingston DDR4 SODIMM",
     maker: "Kingston",
     price: 57300,
@@ -60,7 +55,6 @@ export let products = [
     subcategory: "SODIMM",
   },
   {
-    id: 6,
     title: "SSD Kingston NV2 PCIe 4.0",
     maker: "Kingston",
     price: 32000,
@@ -72,7 +66,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 7,
     title: "SSD Kingston NV2 PCIe 4.0",
     maker: "Kingston",
     price: 70000,
@@ -84,7 +77,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 8,
     title: "SSD A400 SATA",
     maker: "Kingston",
     price: 46200,
@@ -96,7 +88,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 9,
     title: "SSD A400 SATA",
     maker: "Kingston",
     price: 73000,
@@ -108,7 +99,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 10,
     title: "SSD WD green SN350 NVMe",
     maker: "Western Digital",
     price: 36200,
@@ -120,7 +110,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 11,
     title: "SSD WD blue SN580 NVMe",
     maker: "Western Digital",
     price: 60200,
@@ -132,7 +121,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 12,
     title: "SSD WD Green SATA",
     maker: "Western Digital",
     price: 73000,
@@ -144,7 +132,6 @@ export let products = [
     subcategory: "SSD",
   },
   {
-    id: 13,
     title: "HDD WD Blue PC Desktop",
     maker: "Western Digital",
     price: 105000,
@@ -156,7 +143,6 @@ export let products = [
     subcategory: "HDD",
   },
   {
-    id: 14,
     title: "HDD WD Blue Notebook",
     maker: "Western Digital",
     price: 85200,
@@ -168,7 +154,6 @@ export let products = [
     subcategory: "HDD",
   },
   {
-    id: 15,
     title: "Genius KB 116 Black",
     maker: "Genius",
     price: 24000,
@@ -180,7 +165,6 @@ export let products = [
     subcategory: "Teclados",
   },
   {
-    id: 16,
     title: "Genius KB 117 Black",
     maker: "Genius",
     price: 20000,
@@ -192,7 +176,6 @@ export let products = [
     subcategory: "Teclados",
   },
   {
-    id: 17,
     title: "Redragon Draconic Pro Inalámbrico",
     maker: "Redragon",
     price: 73000,
@@ -204,7 +187,6 @@ export let products = [
     subcategory: "Teclados",
   },
   {
-    id: 18,
     title: "Redragon K552 Kumara",
     maker: "Redragon",
     price: 57000,
@@ -216,7 +198,6 @@ export let products = [
     subcategory: "Teclados",
   },
   {
-    id: 19,
     title: "Logitech G213",
     maker: "Logitech",
     price: 93500,
@@ -228,7 +209,6 @@ export let products = [
     subcategory: "Teclados",
   },
   {
-    id: 20,
     title: "Genius DX-110",
     maker: "Genius",
     price: 6450,
@@ -240,7 +220,6 @@ export let products = [
     subcategory: "Mouses",
   },
   {
-    id: 21,
     title: "Logitech M280",
     maker: "Logitech",
     price: 19500,
