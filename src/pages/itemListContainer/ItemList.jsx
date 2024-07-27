@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import "./itemList.css";
 import { ProductCard } from "../../components/productCard/ProductCard";
 
-export const ItemList = ({ products, error, greeting }) => {
+export const ItemList = ({ products, greeting }) => {
   return (
     <div className="containerGreeting">
       <h1>{greeting}</h1>

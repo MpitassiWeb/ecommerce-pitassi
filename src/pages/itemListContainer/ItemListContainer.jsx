@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { bd } from "../../firebaseConfig";
-import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
-import { Box, height } from "@mui/system";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { Grid, Skeleton } from "@mui/material";
 import { styles } from "./styles";
 
