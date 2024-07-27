@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 export const Checkout = () => {
-  const { cart, totalCash, clearCart } = useContext(CartContext);
+  const { cart, totalCash, clearCart2 } = useContext(CartContext);
   const navigate = useNavigate();
   let totalPay = totalCash();
   const { handleSubmit, handleChange, errors } = useFormik({
@@ -33,7 +33,7 @@ export const Checkout = () => {
           updateDoc(refDoc, { stock: element.stock - element.quantity });
         });
       }).finally(()=>{
-        clearCart();
+        clearCart2();
         navigate("/");
       });
     },

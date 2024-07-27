@@ -1,9 +1,12 @@
 import { createContext, useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
   const exists = (id) => {
     let inCar = cart.some((product) => product.id === id);
     return inCar;
@@ -29,10 +32,48 @@ export const CartContextProvider = ({ children }) => {
   };
   const deleteProduct = (id) => {
     let newCart = cart.filter((product) => product.id !== id);
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
+    Swal.fire({
+      title: "¿Estas seguro?",
+      text: "Eliminar producto",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setCart(newCart);
+        localStorage.setItem("cart", JSON.stringify(newCart));
+        Swal.fire({
+          title: "¡Eliminado!",
+          text: "Eliminaste correctamente el producto del carrito",
+          icon: "success",
+        });
+      }
+    });
   };
   const clearCart = () => {
+    Swal.fire({
+      title: "¿Estas seguro?",
+      text: "Estas eliminando todos tus productos del carrito",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setCart([]);
+        localStorage.removeItem("cart");
+        Swal.fire({
+          title: "¡Eliminado!",
+          text: "Eliminaste correctamente los productos del carrito",
+          icon: "success",
+        });
+      }
+    });
+  };
+  const clearCart2 = () => {
     setCart([]);
     localStorage.removeItem("cart");
   };
@@ -57,6 +98,7 @@ export const CartContextProvider = ({ children }) => {
     cart,
     addToCart,
     clearCart,
+    clearCart2,
     deleteProduct,
     getQuantity,
     totalCash,
