@@ -3,6 +3,9 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { bd } from "../../firebaseConfig";
 import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { Box, height } from "@mui/system";
+import { Grid, Skeleton } from "@mui/material";
+import { styles } from "./styles";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
@@ -22,6 +25,50 @@ export const ItemListContainer = ({ greeting }) => {
       setItems(products);
     });
   }, [name]);
+
+
+  if (items.length === 0) {
+    return (
+      <Grid container spacing={2} padding={10}>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={4}>
+          <Skeleton variant="rounded"  sx={styles.img}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="text" sx={styles.text}/>
+          <Skeleton variant="rounded" sx={styles.button}/>
+        </Grid>
+      </Grid>
+    );
+  }
 
   return <ItemList products={items} greeting={greeting} />;
 };
