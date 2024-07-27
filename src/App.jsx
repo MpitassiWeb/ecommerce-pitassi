@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import { Layout } from "./components/layout/Layout";
 import { CartContextProvider } from "./context/CartContext";
 import { Cart } from "./pages/cart/Cart";
@@ -10,6 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
+      <Toaster position="top-center" expand richColors />
       <CartContextProvider>
         <Routes>
           <Route element={<Layout />}>

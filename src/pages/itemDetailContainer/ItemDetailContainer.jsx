@@ -6,6 +6,7 @@ import { bd } from "../../firebaseConfig";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { Container, Grid, Skeleton } from "@mui/material";
 import { styles } from "./styles";
+import { toast } from "sonner";
 
 export const ItemDetailContainer = () => {
   const { addToCart, getQuantity } = useContext(CartContext);
@@ -28,6 +29,10 @@ export const ItemDetailContainer = () => {
   const onAdd = (quantity) => {
     let itemAdd = { ...item, quantity };
     addToCart(itemAdd);
+    toast.success("Producto añadido correctamente", {
+      duration: 2500,
+      description: `${item.title}`,
+    });
   };
 
   return ready ? (
