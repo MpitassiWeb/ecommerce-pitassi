@@ -6,11 +6,11 @@ import * as Yup from "yup";
 export const Checkout = () => {
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: { nombre: "", telefono: "", email: "" },
-    onSubmit: (data) => {},
+    onSubmit: ({nombre, telefono, email}) => {},
     validationSchema: Yup.object({
-      nombre: Yup.string("El nombre debe contener letras").required("Este campo es obligatorio"),
-      telefono: Yup.number("El teléfono debe contener números").required("Este campo es obligatorio"),
-      email: Yup.string().email("El email debe ser un email válido").required("Este campo es obligatorio"),
+      nombre: Yup.string().required("Campo obligatorio"),
+      telefono: Yup.number().typeError("Campo numérico").required("Campo obligatorio"),
+      email: Yup.string().email("Colocar un Email válido").required("Campo obligatorio"),
     }),
     validateOnChange: false,
   });
