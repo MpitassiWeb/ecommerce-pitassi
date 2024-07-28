@@ -15,14 +15,17 @@ nav {
 }
 ul li:hover {
   background-color: rgb(206, 206, 206);
-  border-bottom: 2px solid #c0b922;
+  border-bottom: 2px solid #00b2b6;
+}
+.cartIcon{
+  color: #eeeeee;
 }
 a {
   text-decoration: none;
-  font-size: 1.1em;
-  color: #dddd32;
+  font-size: 1.5em;
+  color: #01fefd;
   font-weight: bold;
 }
 a:hover {
-  color: #c0b922;
+  color: #c0feff;
 }

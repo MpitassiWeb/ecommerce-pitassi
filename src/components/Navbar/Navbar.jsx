@@ -7,7 +7,7 @@ const Navbar = () => {
     <header className="navBarContainer">
       <Link to="/">
         <img
-          src="https://res.cloudinary.com/dqcn00akv/image/upload/v1718243030/LogoOTS-removebg-preview_zzugof.png"
+          src="https://res.cloudinary.com/dqcn00akv/image/upload/v1722178072/OptitechStoreLogo_s3sln2.png"
           alt="Logo de OptiTech Store"
         />
       </Link>

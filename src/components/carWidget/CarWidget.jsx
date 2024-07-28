@@ -11,8 +11,8 @@ export const CarWidget = () => {
 
   return (
     <Badge badgeContent={totalProducts} showZero color="secondary">
-      <Link to="/cart">
-        <ShoppingCartIcon color="#dddd32" />
+      <Link className="cartIcon" to="/cart">
+        <ShoppingCartIcon fontSize="large" />
       </Link>
     </Badge>
   );
