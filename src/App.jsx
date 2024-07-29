@@ -12,7 +12,7 @@ import { light, dark } from "../theme";
 
 function App() {
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={light}>
       <BrowserRouter>
         <Toaster position="top-center" expand richColors />
         <CartContextProvider>

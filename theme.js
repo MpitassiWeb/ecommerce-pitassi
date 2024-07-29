@@ -2,25 +2,25 @@ import { createTheme } from "@mui/material";
 
 export const light = createTheme({
   palette: {
+    mode: "light",
     common: {
       black: "#1b1b1b",
       white: "#eeeeee",
     },
     primary: {
-      main: "#393b40",
-      contrastText: "#01fefd",
+      main: "#01fefd",
+      contrastText: "#141517",
     },
     secondary: {
       main: "#ffe22b",
       contrastText: "#1b1b1b",
     },
     background: {
-      paper: "#f8f8f8",
       default: "#f8f8f8",
     },
     text: {
       primary: "#000000bf",
-      secondary: "#eeeeee",
+      secondary: "#000000",
     },
   },
   typography: {
@@ -61,6 +61,7 @@ export const light = createTheme({
 
 export const dark = createTheme({
   palette: {
+    mode: "dark",
     common: {
       black: "#1b1b1b",
       white: "#eeeeee",
@@ -74,12 +75,11 @@ export const dark = createTheme({
       contrastText: "#1b1b1b",
     },
     background: {
-      paper: "#393b40",
       default: "#141517",
     },
     text: {
-      primary: "#eeeeee",
-      secondary: "#141517",
+      primary: "#eeeeeef5",
+      secondary: "#dcdcdc",
     },
   },
   typography: {

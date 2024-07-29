@@ -23,7 +23,7 @@ export const Cart = () => {
               color: (theme) =>
                 theme.palette.mode === "dark" ? "#eeeeee" : "#141517",
               backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#141517" : "#eeeeee",
+                theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
             }}
           >
             <Grid container spacing={2}>
@@ -50,8 +50,7 @@ export const Cart = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Button
-                      variant="outlined"
+                    <Button variant="outlined"
                       onClick={() => deleteProduct(elemento.id)}
                     >
                       <DeleteIcon />
