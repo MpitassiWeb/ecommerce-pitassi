@@ -26,6 +26,7 @@ export const Checkout = () => {
           icon: "success",
           title: "¡Felicitaciones!",
           text: `Compra realizada con éxito. Su ticket es: ${res.id}`,
+          confirmButtonColor: "#37DD3A",
         });
         let refCollection = collection(bd, "products");
         cart.forEach((element) => {

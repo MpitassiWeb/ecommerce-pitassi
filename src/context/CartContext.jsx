@@ -48,6 +48,7 @@ export const CartContextProvider = ({ children }) => {
           title: "¡Eliminado!",
           text: "Eliminaste correctamente el producto del carrito",
           icon: "success",
+          confirmButtonColor: "#37DD3A",
         });
       }
     });
@@ -69,6 +70,7 @@ export const CartContextProvider = ({ children }) => {
           title: "¡Eliminado!",
           text: "Eliminaste correctamente los productos del carrito",
           icon: "success",
+          confirmButtonColor: "#37DD3A",
         });
       }
     });
