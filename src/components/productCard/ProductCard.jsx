@@ -28,9 +28,7 @@ export const ProductCard = ({ id, title, img, price }) => {
         </CardContent>
         <CardActions>
           <Link to={`/itemDetail/${id}`}>
-            <Button size="small" variant="contained">
-              Ver más
-            </Button>
+            <Button variant="contained">Ver más</Button>
           </Link>
           <Button size="small">
             <FavoriteIcon />

@@ -1,11 +1,11 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./itemList.css";
 import { ProductCard } from "../../components/productCard/ProductCard";
 
 export const ItemList = ({ products, greeting }) => {
   return (
     <div className="containerGreeting">
-      <h1>{greeting}</h1>
+      <Typography variant="h1">{greeting}</Typography>
       <div className="containerProducts">
         <Grid container spacing={2}>
           {products.map((elemento) => {

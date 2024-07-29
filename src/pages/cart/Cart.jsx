@@ -20,8 +20,10 @@ export const Cart = () => {
               p: 2,
               maxWidth: 1000,
               flexGrow: 1,
+              color: (theme) =>
+                theme.palette.mode === "dark" ? "#eeeeee" : "#141517",
               backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+                theme.palette.mode === "dark" ? "#141517" : "#eeeeee",
             }}
           >
             <Grid container spacing={2}>
@@ -37,17 +39,13 @@ export const Cart = () => {
               <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                    <Typography
-                      gutterBottom
-                      variant="subtitle1"
-                      component="div"
-                    >
+                    <Typography gutterBottom variant="subtitle1">
                       {elemento.title}
                     </Typography>
                     <Typography variant="body2" gutterBottom>
                       {elemento.description}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="text.secondary">
                       {`Cantidad: ${elemento.quantity}`}
                     </Typography>
                   </Grid>
@@ -61,7 +59,7 @@ export const Cart = () => {
                   </Grid>
                 </Grid>
                 <Grid item>
-                  <Typography variant="subtitle1" component="div">
+                  <Typography variant="subtitle1">
                     $ {elemento.price}
                   </Typography>
                 </Grid>
@@ -70,8 +68,7 @@ export const Cart = () => {
           </Paper>
         );
       })}
-      {
-        cart.length > 0 ? (
+      {cart.length > 0 ? (
         <Grid item container justifyContent="center" spacing={2}>
           <Grid item>
             <Typography variant="h5">Total a pagar: $ {totalPay}</Typography>
@@ -82,11 +79,14 @@ export const Cart = () => {
             </Button>
           </Grid>
           <Grid item>
-            <Link to="/checkout"><Button variant="contained">Comprar</Button></Link>
+            <Link to="/checkout">
+              <Button variant="contained">Comprar</Button>
+            </Link>
           </Grid>
-        </Grid>) : (<Typography variant="h3">El carrito está vacío</Typography>)
-      }
-      
+        </Grid>
+      ) : (
+        <Typography variant="h3">El carrito está vacío</Typography>
+      )}
     </Grid>
   );
 };

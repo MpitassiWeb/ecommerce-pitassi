@@ -8,16 +8,11 @@
   width: 100px;
   object-fit: cover;
 }
-
 nav {
   display: flex;
   gap: 20px;
 }
-ul li:hover {
-  background-color: rgb(206, 206, 206);
-  border-bottom: 2px solid #00b2b6;
-}
-.cartIcon{
+.cartIcon {
   color: #eeeeee;
 }
 a {
