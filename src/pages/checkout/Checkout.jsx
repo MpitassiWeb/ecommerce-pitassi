@@ -1,4 +1,11 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useContext } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -21,22 +28,24 @@ export const Checkout = () => {
         total: totalPay,
       };
       let refCollection = collection(bd, "orders");
-      addDoc(refCollection, order).then((res) => {
-        Swal.fire({
-          icon: "success",
-          title: "¡Felicitaciones!",
-          text: `Compra realizada con éxito. Su ticket es: ${res.id}`,
-          confirmButtonColor: "#37DD3A",
+      addDoc(refCollection, order)
+        .then((res) => {
+          Swal.fire({
+            icon: "success",
+            title: "¡Felicitaciones!",
+            text: `Compra realizada con éxito. Su ticket es: ${res.id}`,
+            confirmButtonColor: "#37DD3A",
+          });
+          let refCollection = collection(bd, "products");
+          cart.forEach((element) => {
+            let refDoc = doc(refCollection, element.id);
+            updateDoc(refDoc, { stock: element.stock - element.quantity });
+          });
+        })
+        .finally(() => {
+          clearCart2();
+          navigate("/");
         });
-        let refCollection = collection(bd, "products");
-        cart.forEach((element) => {
-          let refDoc = doc(refCollection, element.id);
-          updateDoc(refDoc, { stock: element.stock - element.quantity });
-        });
-      }).finally(()=>{
-        clearCart2();
-        navigate("/");
-      });
     },
     validationSchema: Yup.object({
       nombre: Yup.string().required("Campo obligatorio"),
@@ -55,51 +64,69 @@ export const Checkout = () => {
       <Typography variant="h3" textAlign="center">
         Completar los datos
       </Typography>
-      <Box
-        sx={{
-          height: "250px",
-          padding: "10px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+      <Container
+        sx={{ maxWidth: "80%", display: "flex", justifyContent: "center" }}
       >
-        <TextField
-          name="nombre"
-          label="nombre"
-          variant="outlined"
-          type="text"
-          onChange={handleChange}
-          sx={{ width: "50%", padding: "10px" }}
-          error={errors.nombre ? true : false}
-          helperText={errors.nombre}
-        />
-        <TextField
-          name="telefono"
-          label="telefono"
-          type="tel"
-          variant="outlined"
-          onChange={handleChange}
-          sx={{ width: "50%", padding: "10px" }}
-          error={errors.telefono ? true : false}
-          helperText={errors.telefono}
-        />
-        <TextField
-          name="email"
-          label="email"
-          type="email"
-          variant="outlined"
-          onChange={handleChange}
-          sx={{ width: "50%", padding: "10px" }}
-          error={errors.email ? true : false}
-          helperText={errors.email}
-        />
-      </Box>
-      <Box sx={{ padding: "10px", display: "flex", justifyContent: "center" }}>
-        <Button type="submit" variant="contained">
-          Enviar
-        </Button>
-      </Box>
+        <Box
+          sx={{
+            backgroundColor: (theme) =>
+              theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
+            borderRadius: "10px",
+            margin: "50px",
+            width: "50%",
+            padding: "10px",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <TextField
+              name="nombre"
+              label="nombre"
+              variant="outlined"
+              type="text"
+              sx={{padding:"7px"}}
+              onChange={handleChange}
+              error={errors.nombre ? true : false}
+              helperText={errors.nombre}
+              fullWidth
+            />
+            <TextField
+              name="telefono"
+              label="telefono"
+              type="tel"
+              variant="outlined"
+              sx={{padding:"7px"}}
+              onChange={handleChange}
+              error={errors.telefono ? true : false}
+              helperText={errors.telefono}
+              fullWidth
+            />
+            <TextField
+              name="email"
+              label="email"
+              type="email"
+              variant="outlined"
+              sx={{padding:"7px"}}
+              onChange={handleChange}
+              error={errors.email ? true : false}
+              helperText={errors.email}
+              fullWidth
+            />
+          </Box>
+          <Box
+            sx={{ padding: "10px", display: "flex", justifyContent: "center" }}
+          >
+            <Button type="submit" variant="contained">
+              Enviar
+            </Button>
+          </Box>
+        </Box>
+      </Container>
     </form>
   );
 };

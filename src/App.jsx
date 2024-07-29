@@ -9,10 +9,11 @@ import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 import { light, dark } from "../theme";
+import { SwitchMode } from "./components/switchMode/SwitchMode";
 
 function App() {
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={dark}>
       <BrowserRouter>
         <Toaster position="top-center" expand richColors />
         <CartContextProvider>
