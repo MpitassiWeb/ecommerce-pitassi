@@ -1,27 +1,46 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
-export const Counter = ({ restar, contador, sumar, onAdd }) => {
+export const Counter = ({ restar, stock, contador, sumar, onAdd }) => {
   return (
     <Box width={230}>
-      { contador > 1 && (
-        <Typography variant="span">Ya tenés unidades en el carrito</Typography>
-      )}
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Button variant="contained" onClick={restar}>
-          -
-        </Button>
-        <Typography variant="span" p={3}>
-          {contador}
+      {stock === 1 && (
+        <Typography
+          sx={{
+            color: "red",
+            textAlign: "center",
+            fontWeight: "500",
+            fontSize: "1.4em",
+          }}
+        >
+          Última unidad
         </Typography>
-        <Button variant="contained" onClick={sumar}>
-          +
-        </Button>
-      </Box>
-      <Box>
-        <Button fullWidth variant="contained" onClick={onAdd}>
-          Añadir al carrito
-        </Button>
-      </Box>
+      )}
+      {stock > 0 ? (
+        <>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Button variant="contained" onClick={restar}>
+              -
+            </Button>
+            <Typography variant="span" p={3}>
+              {contador}
+            </Typography>
+            <Button variant="contained" onClick={sumar}>
+              +
+            </Button>
+          </Box>
+          <Box>
+            <Button fullWidth variant="contained" onClick={onAdd}>
+              Añadir al carrito
+            </Button>
+          </Box>
+        </>
+      ) : (
+        <Typography variant="h5" textAlign="center">Producto agotado</Typography>
+      )}
     </Box>
   );
 };
