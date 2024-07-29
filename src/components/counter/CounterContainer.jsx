@@ -17,6 +17,7 @@ export const CounterContainer = ({ onAdd, stock, initialQuantity = 1}) => {
   return (
     <Counter
       contador={contador}
+      stock={stock}
       sumar={sumar}
       restar={restar}
       onAdd={() => onAdd(contador)}
