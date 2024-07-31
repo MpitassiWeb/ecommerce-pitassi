@@ -13,7 +13,14 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 export const ProductCard = ({ id, title, img, price }) => {
   return (
     <Grid item xs={10} sm={8} md={6} lg={4}>
-      <Card>
+      <Card
+        sx={{
+          backgroundColor: (theme) =>
+            theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
+          color: (theme) =>
+            theme.palette.mode === "dark" ? "#eeeeeef5" : "#141517",
+        }}
+      >
         <CardMedia sx={{ height: 300 }} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5">

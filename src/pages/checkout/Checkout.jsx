@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -89,7 +82,7 @@ export const Checkout = () => {
               label="nombre"
               variant="outlined"
               type="text"
-              sx={{padding:"7px"}}
+              sx={{ padding: "7px" }}
               onChange={handleChange}
               error={errors.nombre ? true : false}
               helperText={errors.nombre}
@@ -100,7 +93,7 @@ export const Checkout = () => {
               label="telefono"
               type="tel"
               variant="outlined"
-              sx={{padding:"7px"}}
+              sx={{ padding: "7px" }}
               onChange={handleChange}
               error={errors.telefono ? true : false}
               helperText={errors.telefono}
@@ -111,7 +104,7 @@ export const Checkout = () => {
               label="email"
               type="email"
               variant="outlined"
-              sx={{padding:"7px"}}
+              sx={{ padding: "7px" }}
               onChange={handleChange}
               error={errors.email ? true : false}
               helperText={errors.email}

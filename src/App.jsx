@@ -7,8 +7,8 @@ import { Error404 } from "./pages/error/Error404";
 import { ItemDetailContainer } from "./pages/itemDetailContainer/ItemDetailContainer";
 import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { createTheme, ThemeProvider } from "@mui/material";
-import { theme, dark } from "../theme";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "../theme";
 import { SwitchMode } from "./components/switchMode/SwitchMode";
 import { useState } from "react";
 
@@ -16,6 +16,10 @@ function App() {
   const [lightMode, setDarkMode] = useState(false);
 
   theme.palette.mode = lightMode ? "dark" : "light";
+  theme.palette.text = {
+    primary: theme.palette.mode === "dark" ? "#eeeeeef5" : "#7b7b7b",
+    secondary: theme.palette.mode === "dark" ? "#dcdcdc" : "#7b7b7b",
+  };
 
   return (
     <ThemeProvider theme={theme}>
