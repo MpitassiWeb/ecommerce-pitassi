@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 export const Error404 = () => {
   return (
     <div className="container">
+      <Typography variant="h6">Vuelve al inicio</Typography>
       <Link to="/">
         <img
           src="https://res.cloudinary.com/dqcn00akv/image/upload/v1718232855/OptiTech_Store_dn6qwe.png"
