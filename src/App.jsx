@@ -7,13 +7,24 @@ import { Error404 } from "./pages/error/Error404";
 import { ItemDetailContainer } from "./pages/itemDetailContainer/ItemDetailContainer";
 import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@mui/material";
-import { light, dark } from "../theme";
+import { createTheme, ThemeProvider } from "@mui/material";
+import { theme, dark } from "../theme";
 import { SwitchMode } from "./components/switchMode/SwitchMode";
+import { useState } from "react";
 
 function App() {
+  const [lightMode, setDarkMode] = useState(false);
+
+  theme.palette.mode = lightMode ? "dark" : "light";
+
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={theme}>
+      <SwitchMode
+        check={lightMode}
+        change={() => {
+          setDarkMode(!lightMode);
+        }}
+      />
       <BrowserRouter>
         <Toaster position="top-center" expand richColors />
         <CartContextProvider>

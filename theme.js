@@ -1,26 +1,23 @@
 import { createTheme } from "@mui/material";
 
-export const light = createTheme({
+export let theme = createTheme({
   palette: {
-    mode: "light",
+    mode:"light",
     common: {
       black: "#1b1b1b",
       white: "#eeeeee",
     },
     primary: {
       main: "#01fefd",
+      dark:"#01fefd",
+      light:"#00b2b6",
       contrastText: "#141517",
     },
     secondary: {
       main: "#ffe22b",
+      dark:"#ffe22b",
+      light:"#ecb906",
       contrastText: "#1b1b1b",
-    },
-    background: {
-      default: "#f8f8f8",
-    },
-    text: {
-      primary: "#000000bf",
-      secondary: "#141517",
     },
   },
   typography: {
