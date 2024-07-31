@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { Button, ButtonBase, Grid, Paper, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
+import { styles } from "./styles";
 
 export const Cart = () => {
   const { cart, clearCart, deleteProduct, totalCash } = useContext(CartContext);
@@ -13,22 +14,10 @@ export const Cart = () => {
     <Grid container padding="100px" display="flex" justifyContent="center">
       {cart.map((elemento) => {
         return (
-          <Paper
-            key={elemento.id}
-            sx={{
-              margin: "10px",
-              p: 2,
-              maxWidth: 1000,
-              flexGrow: 1,
-              color: (theme) =>
-                theme.palette.mode === "dark" ? "#eeeeee" : "#141517",
-              backgroundColor: (theme) =>
-                theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
-            }}
-          >
+          <Paper key={elemento.id} sx={styles.paper}>
             <Grid container spacing={2}>
               <Grid item>
-                <ButtonBase sx={{ width: 128 }}>
+                <ButtonBase sx={styles.buttonBase}>
                   <img
                     alt="complex"
                     src={elemento.img}
@@ -50,7 +39,8 @@ export const Cart = () => {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <Button variant="outlined"
+                    <Button
+                      variant="outlined"
                       onClick={() => deleteProduct(elemento.id)}
                     >
                       <DeleteIcon />
