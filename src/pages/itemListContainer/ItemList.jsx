@@ -10,7 +10,7 @@ export const ItemList = ({ products, greeting }) => {
         <Grid container spacing={2}>
           {products.map((elemento) => {
             return (
-              <ProductCard 
+              <ProductCard
                 key={elemento.id}
                 id={elemento.id}
                 title={elemento.title}

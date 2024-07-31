@@ -7,6 +7,7 @@ import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { bd } from "../../firebaseConfig";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { styles } from "./styles";
 
 export const Checkout = () => {
   const { cart, totalCash, clearCart2 } = useContext(CartContext);
@@ -57,32 +58,15 @@ export const Checkout = () => {
       <Typography variant="h3" textAlign="center">
         Completar los datos
       </Typography>
-      <Container
-        sx={{ maxWidth: "80%", display: "flex", justifyContent: "center" }}
-      >
-        <Box
-          sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
-            borderRadius: "10px",
-            margin: "50px",
-            width: "50%",
-            padding: "10px",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
+      <Container sx={styles.container}>
+        <Box sx={styles.box1}>
+          <Box sx={styles.box2}>
             <TextField
               name="nombre"
               label="nombre"
               variant="outlined"
               type="text"
-              sx={{ padding: "7px" }}
+              sx={styles.textField}
               onChange={handleChange}
               error={errors.nombre ? true : false}
               helperText={errors.nombre}
@@ -93,7 +77,7 @@ export const Checkout = () => {
               label="telefono"
               type="tel"
               variant="outlined"
-              sx={{ padding: "7px" }}
+              sx={styles.textField}
               onChange={handleChange}
               error={errors.telefono ? true : false}
               helperText={errors.telefono}
@@ -104,16 +88,14 @@ export const Checkout = () => {
               label="email"
               type="email"
               variant="outlined"
-              sx={{ padding: "7px" }}
+              sx={styles.textField}
               onChange={handleChange}
               error={errors.email ? true : false}
               helperText={errors.email}
               fullWidth
             />
           </Box>
-          <Box
-            sx={{ padding: "10px", display: "flex", justifyContent: "center" }}
-          >
+          <Box sx={styles.boxButton}>
             <Button type="submit" variant="contained">
               Enviar
             </Button>

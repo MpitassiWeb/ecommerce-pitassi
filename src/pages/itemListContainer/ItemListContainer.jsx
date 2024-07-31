@@ -25,45 +25,44 @@ export const ItemListContainer = ({ greeting }) => {
     });
   }, [name]);
 
-
   if (items.length === 0) {
     return (
       <Grid container spacing={2} padding={10}>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={4}>
-          <Skeleton variant="rounded"  sx={styles.img}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="text" sx={styles.text}/>
-          <Skeleton variant="rounded" sx={styles.button}/>
+          <Skeleton variant="rounded" sx={styles.img} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="text" sx={styles.text} />
+          <Skeleton variant="rounded" sx={styles.button} />
         </Grid>
       </Grid>
     );
