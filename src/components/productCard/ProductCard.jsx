@@ -9,27 +9,18 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { styles } from "./styles";
 
 export const ProductCard = ({ id, title, img, price }) => {
   return (
     <Grid item xs={10} sm={8} md={6} lg={4}>
-      <Card
-        sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
-          color: (theme) =>
-            theme.palette.mode === "dark" ? "#eeeeeef5" : "#141517",
-        }}
-      >
-        <CardMedia sx={{ height: 300 }} image={img} title={title} />
+      <Card sx={styles.card}>
+        <CardMedia sx={styles.cardMedia} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5">
             {title}
           </Typography>
-          <Typography
-            variant="h6"
-            sx={{ fontSize: "1.8em", paddingTop: "20px", textAlign: "end" }}
-          >
+          <Typography variant="h6" sx={styles.price}>
             {`$ ${price}`}
           </Typography>
         </CardContent>
