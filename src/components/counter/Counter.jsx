@@ -1,19 +1,11 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { styles } from "./styles";
 
 export const Counter = ({ restar, stock, contador, sumar, onAdd }) => {
   return (
     <Box width={230}>
       {stock === 1 && (
-        <Typography
-          sx={{
-            color: "#DD3333",
-            textAlign: "center",
-            fontWeight: "500",
-            fontSize: "1.4em",
-          }}
-        >
-          Última unidad
-        </Typography>
+        <Typography sx={styles.tyUltimaUnidad}>Última unidad</Typography>
       )}
       {stock > 0 ? (
         <>
@@ -39,7 +31,9 @@ export const Counter = ({ restar, stock, contador, sumar, onAdd }) => {
           </Box>
         </>
       ) : (
-        <Typography variant="h5" textAlign="center">Producto agotado</Typography>
+        <Typography variant="h5" textAlign="center">
+          Producto agotado
+        </Typography>
       )}
     </Box>
   );
