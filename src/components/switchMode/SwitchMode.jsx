@@ -58,7 +58,6 @@ export const SwitchMode = ({ check, change }) => {
             checked={check}
             onChange={change}
             sx={{ m: 1 }}
-            defaultChecked
           />
         }
         label="Dark mode"
