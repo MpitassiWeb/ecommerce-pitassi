@@ -1,13 +1,15 @@
-import { Grid, Typography } from "@mui/material";
-import "./itemList.css";
+import { Box, Grid, Typography } from "@mui/material";
 import { ProductCard } from "../../components/productCard/ProductCard";
+import { styles } from "./styles";
 
 export const ItemList = ({ products, greeting }) => {
   return (
-    <div className="containerGreeting">
-      <Typography variant="h1">{greeting}</Typography>
-      <div className="containerProducts">
-        <Grid container spacing={2}>
+    <>
+      <Typography variant="h1" sx={styles.titleItemList}>
+        {greeting}
+      </Typography>
+      <Box sx={styles.box}>
+        <Grid container component="section" sx={styles.gridSection}>
           {products.map((elemento) => {
             return (
               <ProductCard
@@ -20,7 +22,7 @@ export const ItemList = ({ products, greeting }) => {
             );
           })}
         </Grid>
-      </div>
-    </div>
+      </Box>
+    </>
   );
 };

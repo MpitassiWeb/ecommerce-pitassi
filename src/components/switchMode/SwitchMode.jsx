@@ -26,7 +26,7 @@ export const SwitchMode = ({ check, change }) => {
       },
     },
     "& .MuiSwitch-thumb": {
-      backgroundColor: theme.palette.mode === "dark" ? "#001e3c" : "#0794ff",
+      backgroundColor: theme.palette.mode === "dark" ? "#0794ff" : "#001e3c",
       width: 32,
       height: 32,
       "&::before": {

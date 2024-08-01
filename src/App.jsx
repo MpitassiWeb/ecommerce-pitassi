@@ -8,14 +8,14 @@ import { ItemDetailContainer } from "./pages/itemDetailContainer/ItemDetailConta
 import { ItemListContainer } from "./pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "../theme";
+import { theme } from "./theme";
 import { SwitchMode } from "./components/switchMode/SwitchMode";
 import { useState } from "react";
 
 function App() {
   const [lightMode, setDarkMode] = useState(false);
 
-  theme.palette.mode = lightMode ? "dark" : "light";
+  theme.palette.mode = lightMode ? "light" : "dark";
   theme.palette.text = {
     primary: theme.palette.mode === "dark" ? "#eeeeeef5" : "#7b7b7b",
     secondary: theme.palette.mode === "dark" ? "#dcdcdc" : "#7b7b7b",

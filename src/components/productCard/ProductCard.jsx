@@ -13,8 +13,8 @@ import { styles } from "./styles";
 
 export const ProductCard = ({ id, title, img, price }) => {
   return (
-    <Grid item xs={10} sm={8} md={6} lg={4}>
-      <Card sx={styles.card}>
+    <Grid item xs={12} sm={10} md={6} lg={4}>
+      <Card component="figure" sx={styles.card}>
         <CardMedia sx={styles.cardMedia} image={img} title={title} />
         <CardContent>
           <Typography gutterBottom variant="h5">

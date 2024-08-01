@@ -11,4 +11,7 @@ export let styles = {
     width: { xs: "90px", md: "100px", lg: "110px" },
     height: "40px",
   },
+  titleItemList: { margin: "50px" },
+  box: { width: "90%", margin: "auto" },
+  gridSection: { marginBottom: "50px", justifyContent: "center" },
 };
