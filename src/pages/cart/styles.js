@@ -9,4 +9,7 @@ export let styles = {
       theme.palette.mode === "dark" ? "#141517" : "#f8f8f8",
   },
   buttonBase: { width: 128 },
+  buttonDelette: {
+    color: (theme) => (theme.palette.mode === "dark" ? "#01fefd" : "#464646"),
+  },
 };

@@ -34,7 +34,7 @@ export const Cart = () => {
                     <Typography variant="body2" gutterBottom>
                       {elemento.description}
                     </Typography>
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography variant="body1">
                       {`Cantidad: ${elemento.quantity}`}
                     </Typography>
                   </Grid>
@@ -42,6 +42,7 @@ export const Cart = () => {
                     <Button
                       variant="outlined"
                       onClick={() => deleteProduct(elemento.id)}
+                      sx={styles.buttonDelette}
                     >
                       <DeleteIcon />
                     </Button>
