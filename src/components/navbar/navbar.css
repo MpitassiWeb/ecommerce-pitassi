@@ -1,0 +1,26 @@
+.navBarContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+.navBarContainer img {
+  width: 100px;
+  object-fit: cover;
+}
+nav {
+  display: flex;
+  gap: 20px;
+}
+.cartIcon {
+  color: #eeeeee;
+}
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #01fefd;
+  font-weight: bold;
+}
+a:hover {
+  color: #c0feff;
+}
