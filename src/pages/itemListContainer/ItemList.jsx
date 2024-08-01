@@ -18,6 +18,7 @@ export const ItemList = ({ products, greeting }) => {
                 title={elemento.title}
                 img={elemento.img}
                 price={elemento.price}
+                stock={elemento.stock}
               />
             );
           })}

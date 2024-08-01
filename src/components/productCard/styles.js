@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material";
 
 export let styles = {
   card: {
