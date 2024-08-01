@@ -2,7 +2,7 @@ import { CarWidget } from "../carWidget/CarWidget";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <header className="navBarContainer">
       <Link to="/">
@@ -23,5 +23,3 @@ const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;
