@@ -27,7 +27,7 @@ export const Checkout = () => {
           Swal.fire({
             icon: "success",
             title: "¡Felicitaciones!",
-            text: `Compra realizada con éxito. Su ticket es: ${res.id}`,
+            text: `Compra realizada con éxito. Su número de orden es: ${res.id}`,
             confirmButtonColor: "#37DD3A",
           });
           let refCollection = collection(bd, "products");
